@@ -4,7 +4,7 @@ import '../styles/Accordion.css'; // Assicurati di avere il CSS nello stesso per
 
 interface AccordionProps {
   title: string;
-  content: string;
+  content: React.ReactNode;
 }
 
 const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
@@ -20,7 +20,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
       </div>
       {isOpen && (
         <div className='accordion-content'>
-          <p>{content}</p>
+          {content}
         </div>
       )}
     </div>
