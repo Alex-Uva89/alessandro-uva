@@ -1,0 +1,134 @@
+/* Stile generale per la pagina */
+.skillsPage__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 135px);
+  }
+  
+  /* Stile per i titoli principali */
+  .skillsPage__content h2 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--green);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+  
+  .skillsPage__content h2:hover {
+    color: #005ea1;
+  }
+  
+  /* Stile per i sottotitoli */
+  .skillsPage__content h3 {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Stile per le liste */
+  .skillsPage__content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skillsPage__content ul li {
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .skillsPage__content ul li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Stile per il testo delle competenze */
+  .skillsPage__content ul li span {
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .skillsPage__content ul li span:first-child {
+    font-weight: bold;
+    color: var(--green);
+  }
+  
+  /* Stile per i container delle competenze */
+  .skillsPage__content > div {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: scroll;
+    scrollbar-width: none;
+    max-height: 100%;
+    transition: background-color 0.3s, transform 0.4s;
+  }
+  
+  .skillsPage__content > div:hover {
+    background-color: var(--green);
+    color: var(--white);
+    font-weight: bold;
+    transform: scale(1.2) translateY(30px);
+    z-index: 1000;
+  }
+
+  .skillsPage__content > div:hover h2,
+  .skillsPage__content > div:hover h3{
+    color: var(--white);
+  }
+  
+  /* Stile per rendere il layout responsivo */
+  @media (max-width: 768px) {
+    .skillsPage__content {
+      grid-template-columns: 1fr;
+    }
+
+    .skillsPage__content{
+      height: calc(100vh - 135px);
+      overflow: scroll;
+      scrollbar-width: none;
+    }
+
+    .skillsPage__content div{
+      height: 300px;
+      overflow: scroll;
+    }
+  }
+  
+  /* Effetti di animazione */
+  .skillsPage__content > div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 122, 204, 0.1), rgba(0, 255, 204, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .skillsPage__content > div:hover::after {
+    opacity: 1;
+  }
+  

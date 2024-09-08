@@ -1,0 +1,26 @@
+header{
+    background-color: var(--green-background);
+    color: var(--black);
+    height: 100px;
+    width: calc(100vw - 300px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid var(--green-dark);
+}
+
+header h1{
+    color: var(--white);
+    width: 70%;
+    font-size: 2rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    header{
+        width: 100vw;
+    }
+}

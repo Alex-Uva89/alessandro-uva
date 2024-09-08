@@ -1,0 +1,114 @@
+.experiencePage__content{
+    max-height: calc(100vh - 135px);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    font-weight: 400;
+}
+
+/* Stile di base per la pagina */
+.Container-App {
+    font-family: "Barlow Condensed", sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* Stile per il contenuto principale */
+  .experiencePage__content {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .experiencePage__content:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Stile per i titoli */
+  .experiencePage__content h2 {
+    color: var(--green-dark);
+    margin-bottom: 10px;
+    font-size: 24px;
+    border-bottom: 2px solid var(--green);
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .experiencePage__content h2:hover {
+    color: var(--green);
+  }
+  
+  /* Stile per i sottotitoli */
+  .experiencePage__content h5 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  /* Stile per i paragrafi */
+  .experiencePage__content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  /* Stile per le liste */
+  .list-i-do {
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style: none;
+    border-left: 3px solid var(--green);
+    margin-bottom: 20px;
+  }
+  
+  .list-i-do li {
+    margin-bottom: 10px;
+    padding: 8px;
+    position: relative;
+    font-size: 20px;
+    color: #444;
+    transition: background-color 0.2s ease;
+  }
+  
+  .list-i-do li:before {
+    content: "✔";
+    color: var(--green);
+    position: absolute;
+    left: -15px;
+    font-size: 12px;
+  }
+  
+  .list-i-do li:hover {
+    background-color: var(--green);
+    color: var(--white);
+    font-weight: bold;
+  }
+  
+  
+  /* Stile responsivo per dispositivi mobili */
+  @media (max-width: 768px) {
+    .Container-App {
+      padding: 10px;
+    }
+  
+    .experiencePage__content {
+      padding: 15px;
+    }
+  
+    .experiencePage__content h2 {
+      font-size: 20px;
+    }
+  
+    .experiencePage__content h5 {
+      font-size: 16px;
+    }
+  
+    .list-i-do li {
+      font-size: 14px;
+    }
+  }
+  

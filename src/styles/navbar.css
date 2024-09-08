@@ -1,0 +1,122 @@
+/* Stili generali del menu */
+.navbar {
+  background-color: var(--green-background);
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-right: 2px solid var(--green-dark);
+  height: 100%;
+  width: 300px;
+  transition: transform 0.3s ease; /* Transizione per aprire/chiudere il menu */
+  z-index: 10;
+}
+
+.navbar.open {
+  transform: translateX(0); /* Mostra il menu */
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-toggle {
+  display: none; /* Nasconde il pulsante su desktop */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.navbar-menu {
+  height: calc(100% - 50px);
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.navbar-menu li {
+  border: 2px solid var(--green-dark);
+  border-radius: 10px;
+  background-color: var(--green-background);
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.navbar-menu li a {
+  display: block;
+  padding: .8rem 1rem;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}
+
+.navbar-menu li:hover {
+  transform: scale(1.5) translateX(50px);
+  background-color: var(--green);
+  border-color: var(--green-dark);
+}
+
+.navbar-menu li:hover a {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      position: fixed;
+      width: 60px; 
+      height: 100vh;
+      transform: translateX(-15%); 
+      color: var(--white);
+  }
+
+  .navbar.open {
+      width: 100vw;
+  }
+
+  .navbar-toggle {
+      display: block;
+      width: 100%;
+      text-align: right;
+  }
+
+  .navbar-menu {
+      margin-top: 1rem;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+  .navbar-header h2{
+      display: none;
+  }
+
+  .navbar-menu li {
+      display: none;
+  }
+
+  .navbar-menu.active li {
+      display: block;
+  }
+
+  .navbar-menu.active li a {
+      display: block;
+      color: var(--white);
+      font-weight: bold;
+      font-size: 1.3rem;
+      transition: all 0.3s;
+  }
+
+  .navbar-menu.active li:hover {
+      transform: scale(1.2) translateX(25px);
+  }
+}

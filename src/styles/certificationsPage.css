@@ -1,0 +1,114 @@
+/* Stile generale per la pagina */
+.certificationsPage__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    color: var(--green);
+    margin: 30px auto;
+    height: calc(100vh - 135px);
+    overflow: scroll;
+    scrollbar-width: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Stile per le sezioni delle certificazioni */
+  .certification-section {
+    background: linear-gradient(160deg, var(--white),var(--white), var(--green-background));
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    overflow: scroll;
+    scrollbar-width: none; 
+    transition: max-height 0.3s ease, transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 2px solid var(--green-dark);
+    outline: 2px solid var(--green);
+    max-height: 150px;
+  }
+  
+  .certification-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    cursor: url(../assets/arrow.png), auto;
+    max-height: 10000px; 
+  }
+  
+  
+  .certification-section h2 {
+    color: var(--black);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .certification-section h3 {
+    color: var(--black);
+    font-size: 1.5rem;
+    margin-top: 12px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .certification-section ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .certification-section ul li {
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .certification-section ul li:hover {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .certification-section p {
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 8px 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .certification-section:hover::before {
+    transform: scale(1.5) translate(50px, 50px);
+    height: 100%;
+  }
+  
+  /* Media Query per dispositivi mobili */
+  @media (max-width: 768px) {
+    .certificationsPage__content {
+      padding: 15px;
+    }
+  
+    .certification-section {
+      padding: 16px;
+      width: 80vw;
+    }
+  
+    .certification-section h2 {
+      font-size: 20px;
+    }
+  
+    .certification-section ul li,
+    .certification-section p {
+      font-size: 14px;
+    }
+  }
+  
