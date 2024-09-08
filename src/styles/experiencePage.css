@@ -1,5 +1,4 @@
 .experiencePage__content{
-    max-height: calc(100vh - 135px);
     overflow-y: scroll;
     scrollbar-width: none;
     font-weight: 400;

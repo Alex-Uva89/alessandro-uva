@@ -1,7 +1,6 @@
 /* Stile principale per la pagina delle richieste */
 .requestPage__content {
     width: 75vw;
-    height: calc(100vh - 135px);
     margin: 30px auto;
     padding: 24px;
     border-left: 4px solid var(--green-dark);
@@ -67,7 +66,14 @@
   
   @media (max-width: 768px) {
     .requestPage__content {
+      width: 90%;
+      margin-left: 40px;
       padding: 16px;
+      overflow: scroll;
+    }
+
+    .requestPage__content li::before {
+      content: '';
     }
   
     .request-list li {

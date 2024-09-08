@@ -9,7 +9,6 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     color: var(--green);
     margin: 30px auto;
-    height: calc(100vh - 135px);
     overflow: scroll;
     scrollbar-width: none;
     transition: background-color 0.3s ease;
