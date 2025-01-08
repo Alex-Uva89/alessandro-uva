@@ -77,6 +77,7 @@ strong{
 
   .Container-App{
     width: auto;
+    height: fit-content;
     margin-left: 41px;
     margin-top: -10px;
   }
