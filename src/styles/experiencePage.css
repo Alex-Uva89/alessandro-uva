@@ -9,6 +9,8 @@
     font-family: "Barlow Condensed", sans-serif;
     background-color: #f5f5f5;
     color: #333;
+    margin-left: 300px;
+    width: calc(100vw - 300px);
   }
   
   /* Stile per il contenuto principale */

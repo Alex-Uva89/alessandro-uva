@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html{
+  scrollbar-width: none;
+}
+
+
 #root {
   height: 100vh;
   width: 100%%;
@@ -52,7 +57,7 @@ strong{
 .homePage_content,.skillsPage__content, .experiencePage__content, .certificationsPage__content, .contactPage__content, .requestPage__content, .portfolioPage__content  {
   padding: 2rem;
   background-color: white;
-  margin: 1rem auto;
+  margin-top: 6rem;
   max-width: 80vw;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;

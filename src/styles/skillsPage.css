@@ -70,6 +70,8 @@
     color: var(--green);
   }
   
+
+
   /* Stile per i container delle competenze */
   .skillsPage__content > div {
     background-color: #ffffff;
@@ -94,6 +96,10 @@
   .skillsPage__content > div:hover h2,
   .skillsPage__content > div:hover h3{
     color: var(--white);
+  }
+
+  .skillsPage__content > div:hover ul li span{
+    color: var(--black);
   }
   
   /* Stile per rendere il layout responsivo */
