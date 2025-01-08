@@ -21,6 +21,12 @@
   align-items: center;
 }
 
+.navbar-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
 .navbar-toggle {
   display: none; /* Nasconde il pulsante su desktop */
   font-size: 2rem;
@@ -33,7 +39,7 @@
 .navbar-menu {
   height: 100%;
   list-style: none;
-  padding: 0;
+  padding: 2.5rem 0;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
@@ -43,7 +49,7 @@
 .navbar-menu li {
   border: 2px solid var(--green-dark);
   border-radius: 10px;
-  background-color: var(--green-background);
+  background-color: var(--white);
   transition: all 0.3s;
   overflow: hidden;
 }
@@ -55,6 +61,7 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 1.6rem;
+  z-index: 10;
   transition: all 0.3s;
 }
 
@@ -64,9 +71,24 @@
   border-color: var(--green-dark);
 }
 
+.navbar-menu li.selected{
+  background-color: var(--green-dark);
+  border-color: var(--white);
+  color: var(--white);
+  text-transform: underline;
+}
+
+.navbar-menu li.selected a {
+  color: var(--white);
+  text-decoration: underline;
+  user-select:text;
+}
+
 .navbar-menu li:hover a {
   color: var(--white);
   font-size: 1.3rem;
+  text-decoration: underline;
+  user-select:text;
 }
 
 @media (max-width: 768px) {
@@ -79,7 +101,6 @@
   }
 
   .navbar.open {
-
       width: 100vw;
       z-index: 11;
   }
@@ -112,10 +133,14 @@
 
   .navbar-menu.active li a {
       display: block;
-      color: var(--white);
+      color: var(--black);
       font-weight: bold;
       font-size: 1.3rem;
       transition: all 0.3s;
+  }
+
+  .navbar-menu.active li.selected a{
+    color: var(--white);
   }
 
   .navbar-menu.active li:hover {

@@ -4,6 +4,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  /* FONT */
+  font-family: "Lexend", serif;
+  text-decoration: none;
+}
+html::-webkit-scrollbar {
+  width: 0;
 }
 
 html{
@@ -18,17 +25,17 @@ html{
 }
 
 :root {
-  --green: #07c900;
-  --green-dark: #059000;
-  --green-light: #0aff01;
-  --green-background: #78c561;
+  --green: rgb(0, 150, 136);
+  --green-dark: rgb(0, 102, 102);
+  --green-light: rgb(0, 204, 153);
+  --green-background: rgb(0, 150, 136);
   --white: #f0f0f0;
   --black: #333;
 }
 
 
 body {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Lexend", serif;
   font-weight: 100;
   font-style: normal;
   background-color: var(--white);
@@ -52,6 +59,10 @@ a:hover{
 
 strong{
   font-weight: 700;
+}
+
+h2{
+  font-weight: bold;
 }
 
 .homePage_content,.skillsPage__content, .experiencePage__content, .certificationsPage__content, .contactPage__content, .requestPage__content, .portfolioPage__content  {

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/navbar.css';
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false); 
-
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -12,7 +12,10 @@ const Navbar: React.FC = () => {
     if (button) {
       button.innerHTML = isOpen ? '&#9776;' : '&#10006;';
     }
+  };
 
+  const isSelected = (path: string) => {
+    return location.pathname === path ? 'selected' : '';
   };
 
   return (
@@ -24,13 +27,13 @@ const Navbar: React.FC = () => {
         </button>
       </div>
       <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
-        <li><Link to="/" onClick={toggleMenu}>Mi presento...</Link></li>
-        <li><Link to="/contact" onClick={toggleMenu}>Contatti</Link></li>
-        <li><Link to="/experience" onClick={toggleMenu}>Esperienze Lavorative</Link></li>
-        <li><Link to="/skills" onClick={toggleMenu}>Skills</Link></li>
-        <li><Link to="/certifications" onClick={toggleMenu}>Certificazioni e Riconoscimenti</Link></li>
-        <li><Link to="/requests" onClick={toggleMenu}>Mie Richieste</Link></li>
-        <li><Link to="/portfolio" onClick={toggleMenu}>Portfolio</Link></li>
+        <li className={isSelected('/')}><Link to="/" onClick={toggleMenu}>Mi presento...</Link></li>
+        <li className={isSelected('/contact')}><Link to="/contact" onClick={toggleMenu}>Contatti</Link></li>
+        <li className={isSelected('/experience')}><Link to="/experience" onClick={toggleMenu}>Esperienze Lavorative</Link></li>
+        <li className={isSelected('/skills')}><Link to="/skills" onClick={toggleMenu}>Skills</Link></li>
+        <li className={isSelected('/certifications')}><Link to="/certifications" onClick={toggleMenu}>Certificazioni e Riconoscimenti</Link></li>
+        <li className={isSelected('/requests')}><Link to="/requests" onClick={toggleMenu}>Mie Richieste</Link></li>
+        <li className={isSelected('/portfolio')}><Link to="/portfolio" onClick={toggleMenu}>Portfolio</Link></li>
       </ul>
     </nav>
   );

@@ -16,6 +16,7 @@
   margin-bottom: 30px;
   font-size: 1.5rem;
   font-weight: 400;
+  gap: 10px;
 }
 .contactPage__content h2 {
     color: var(--green-dark);

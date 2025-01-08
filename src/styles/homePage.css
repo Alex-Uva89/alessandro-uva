@@ -11,6 +11,7 @@
   overflow-y: scroll;
   scrollbar-width: none;
   margin-top: 4rem;
+  position: relative;
 }
 
 
@@ -19,11 +20,14 @@
     object-fit: cover;
     border-radius: 10px;    
     margin: 1rem;
+    position: absolute;
+    top: 0;
+    left: 2rem;
 }
 
 .homePage__text {
     font-size: 1.3rem;
-    margin: 1rem;
+    margin: 1rem 1rem 1rem 15rem;
     width: 100%;
     max-height: 100%;
     padding: 1rem;
@@ -69,6 +73,7 @@
     .homePage__text {
         order: 2;
         font-size: 1rem;
+        margin: 0;
     }
     .homePage__title{
         position: absolute;
@@ -76,8 +81,9 @@
     }
 
     .homePage__image{
-        width: 100px;
+        width: 150px;
         order: 1;
+        position: inherit;
     }
   }
 
