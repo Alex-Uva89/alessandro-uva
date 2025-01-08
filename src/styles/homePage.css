@@ -62,6 +62,7 @@
 
   @media (max-width: 768px) {
     .homePage_content{
+      position: relative;
       width: 100vw;
       flex-direction: column;
     }
@@ -71,7 +72,7 @@
     }
     .homePage__title{
         position: absolute;
-        top: 120px;
+        top: 50px;
     }
 
     .homePage__image{

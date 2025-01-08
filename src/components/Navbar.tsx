@@ -8,6 +8,11 @@ const Navbar: React.FC = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    const button = document.querySelector('.navbar-toggle');
+    if (button) {
+      button.innerHTML = isOpen ? '&#9776;' : '&#10006;';
+    }
+
   };
 
   return (

@@ -66,13 +66,18 @@ strong{
 @media (max-width: 768px) {
   .homePage_content,.skillsPage__content, .experiencePage__content, .certificationsPage__content, .contactPage__content, .requestPage__content, .portfolioPage__content {
     padding: 1rem;
-    margin: 0;
-    max-width: 95vw;
+    margin: 6rem 0;
+    max-width: 90vw;
     height: 100%;
   }
 
+  .requestPage__content{
+    width: 100%;
+  }
+
   .Container-App{
-    margin-left: 35px;
+    width: auto;
+    margin-left: 41px;
     margin-top: -10px;
   }
 }
