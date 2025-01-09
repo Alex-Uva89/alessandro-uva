@@ -103,6 +103,7 @@
   .certification-section {
     padding: 16px;
     width: 80vw;
+    max-height: 800px;
   }
 
   .certification-section h2 {
