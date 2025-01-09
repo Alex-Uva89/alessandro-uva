@@ -1,54 +1,59 @@
-
 .accordion-item {
-    padding: 2px;
-    cursor: pointer;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.accordion-header {
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--green-background);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top: 2px solid var(--green-dark);
+  border-left: 2px solid var(--green-dark);
+  border-right: 2px solid var(--green-dark);
+  transition: all 0.3s;
+  outline: none; /* Rimuove il bordo di focus predefinito */
+}
+
+.accordion-header:focus {
+  background-color: var(--yellow); /* Colore di focus visibile */
+  border: 2px solid var(--green-dark);
+}
+
+.accordion-header:hover,
+.accordion-header:focus {
+  background-color: var(--white);
+  color: var(--green);
+}
+
+.accordion-icon {
+  font-size: 2rem;
+  transition: transform 0.3s;
+}
+
+.accordion-icon.open {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  font-weight: 400;
+  padding: 15px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  animation: slide-down 0.3s ease-in-out;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    max-height: 0;
   }
-  
-  .accordion-header {
-    color: var(--white);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: var(--green-background);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-top:2px solid var(--green-dark);
-    border-left: 2px solid var(--green-dark);
-    border-right: 2px solid var(--green-dark);
-    transition: all 0.3s;
+  to {
+    opacity: 1;
+    max-height: 500px;
   }
-  
-  .accordion-header:hover {
-    background-color: var(--white);
-    color: var(--green);
-  }
-  
-  .accordion-icon {
-    font-size: 2rem;
-    transition: transform 0.3s;
-  }
-  
-  .accordion-icon.open {
-    transform: rotate(180deg);
-  }
-  
-  .accordion-content {
-    font-weight: 400;
-    padding: 15px;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-    animation: slide-down 0.3s ease-in-out;
-  }
-  
-  @keyframes slide-down {
-    from {
-      opacity: 0;
-      max-height: 0;
-    }
-    to {
-      opacity: 1;
-      max-height: 500px; 
-    }
-  }
-  
+}

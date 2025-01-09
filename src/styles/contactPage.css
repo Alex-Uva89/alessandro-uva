@@ -1,57 +1,76 @@
+:root {
+  --green: #4caf50;
+  --green-dark: #388e3c;
+  --white: #ffffff;
+  --gray-light: #f5f5f5;
+  --black: #000000;
+}
+
 .contactPage__content {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: #f5f5f5;
+  background-color: var(--gray-light);
+  padding: 20px;
 }
 
-.contactPage__content .contact-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: white;
+.contact-card,
+.contact-direct {
+  background-color: var(--white);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
-  font-size: 1.5rem;
+}
+
+.contact-card {
+  font-size: 1.25rem;
   font-weight: 400;
   gap: 10px;
 }
-.contactPage__content h2 {
-    color: var(--green-dark);
-    margin-bottom: 10px;
-    font-size: 24px;
-    border-bottom: 2px solid var(--green);
-    border-top: 2px solid var(--green);
-    padding: 10px 0;
+
+.contact-card a {
+  color: var(--green-dark);
+  text-decoration: none;
 }
 
-.contact-direct h2{
-    text-align: center;
-    margin-bottom: 20px;
+.contact-card a:hover,
+.contact-card a:focus {
+  color: var(--green);
+  text-decoration: underline;
+  outline: 2px solid var(--green-dark);
+  outline-offset: 2px;
 }
 
-.contactPage__content .contact-card a {
-    color: var(--green-dark);
-    font-weight: bold;
+.contact-card a:focus {
+  outline: 2px dashed var(--green-dark);
 }
 
-.contactPage__content .contact-card a:hover {
-    color: var(--green);
+.contact-card h2 {
+  color: var(--green-dark);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--green);
+  padding-bottom: 5px;
+}
+
+.contact-direct h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
 }
 
 @media (max-width: 768px) {
-  .Container-App .contactPage__content {
+  .contactPage__content {
     padding: 10px;
   }
 
-    .Container-App .contactPage__content .contact-card {
-        padding: 10px;
-        font-size: 1rem;
-    }
+  .contact-card {
+    font-size: 1rem;
+    padding: 10px;
+  }
 
-    .contact-direct h2{
-        font-size: 1.1rem;
-    }
+  .contact-direct h2 {
+    font-size: 1rem;
+  }
 }

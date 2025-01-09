@@ -44,7 +44,10 @@ const ContactForm: React.FC = () => {
     <div className="contact-form-container">
       {isSubmitted && (
         <div className="confirmation-message" onClick={() => setIsSubmitted(false)}>
-          <p>Messaggio inviato con successo! Ti risponderò al più presto.</p>
+          <p>
+              Messaggio inviato con successo! &#128515;  
+            <br />
+            Ti risponderò al più presto.</p>
         </div>
       )}
       <form onSubmit={handleSubmit} className="contact-form">

@@ -48,6 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: url('../assets/x-letter.svg'), auto;
   }
 
   .contact-form-container .confirmation-message p{
@@ -59,7 +60,13 @@
     color: var(--green);
     border: 3px solid var(--green-dark);
     border-radius: 10px;
+  }
 
+  @media (max-width: 768px) {
+    .contact-form-container .confirmation-message p{
+      font-size: 1.5rem;
+      padding: 2rem;
+    }
   }
   
 
