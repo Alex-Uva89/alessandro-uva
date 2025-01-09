@@ -42,7 +42,7 @@
 
 @media (max-width: 768px) {
   .Container-App .contactPage__content {
-    padding: 60px;
+    padding: 10px;
   }
 
     .Container-App .contactPage__content .contact-card {
