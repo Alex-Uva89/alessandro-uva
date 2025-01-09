@@ -36,6 +36,7 @@
 .personal-info td {
   padding: 8px;
   text-align: left;
+  font-weight: 400;
 }
 
 .personal-info td strong {
