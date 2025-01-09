@@ -1,122 +1,67 @@
 /* Stile generale per la pagina */
-.skillsPage__content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Stile per i titoli principali */
-  .skillsPage__content h2 {
-    color: #333;
-    font-size: 22px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--green);
-    padding-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-  }
-  
-  .skillsPage__content h2:hover {
-    color: #005ea1;
-  }
-  
-  /* Stile per i sottotitoli */
-  .skillsPage__content h3 {
-    color: #666;
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-  }
-  
-  /* Stile per le liste */
-  .skillsPage__content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .skillsPage__content ul li {
-    background-color: #fff;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: box-shadow 0.2s;
-  }
-  
-  .skillsPage__content ul li:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Stile per il testo delle competenze */
-  .skillsPage__content  ul li span {
-    color: #333;
-    font-weight: 500;
-    transition: all 0.3s ease;
-  }
-  
-  .skillsPage__content ul li span:first-child {
-    font-weight: bold;
-    color: var(--green);
-  }
-  
+.skills-page-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 8rem;
+}
 
+.skills-category {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  /* Stile per i container delle competenze */
-  .skillsPage__content > div {
-    background-color: #ffffff;
+.skills-category h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.skill-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border: .1px solid var(--green-dark);
+}
+
+.skill-name {
+  font-weight: bold;
+  color: var(--green-dark);
+}
+
+.skill-level {
+  font-weight: bold;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .skills-page-content {
     padding: 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    position: relative;
-    overflow: scroll;
-    scrollbar-width: none;
-    max-height: 100%;
-    transition: background-color 0.3s, transform 0.4s;
-  }
-  
-  .skillsPage__content > div:hover {
-    background-color: var(--green);
-    color: var(--white);
-    transform: scale(1.05);
   }
 
-  .skillsPage__content > div:hover h2,
-  .skillsPage__content > div:hover h3{
-    color: var(--white);
+  .skills-category {
+    padding: 15px;
   }
-
-  
-  .skillsPage__content > div:hover ul li span{
-    color: var(--black);
-    font-weight: 700;
-    font-size: 1.2rem;
-  }
-  
-  /* Stile per rendere il layout responsivo */
-  @media (max-width: 768px) {
-    .skillsPage__content {
-      grid-template-columns: 1fr;
-    }
-
-    .skillsPage__content{
-      overflow: scroll;
-      scrollbar-width: none;
-    }
-
-    .skillsPage__content div{
-      height: 300px;
-      overflow: scroll;
-    }
-  }
-  
+}
