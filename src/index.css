@@ -29,6 +29,7 @@ html{
   --green-dark: rgb(0, 102, 102);
   --green-light: rgb(0, 204, 153);
   --green-background: rgb(0, 150, 136);
+  --green-trasparent: rgba(0, 150, 136, 0.7);
   --white: #f0f0f0;
   --black: #333;
 }

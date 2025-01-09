@@ -41,30 +41,36 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="contact-form">
-      <label>
-        Nome:
-        <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
-      </label>
-      <label>
-        Cognome:
-        <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
-      </label>
-      <label>
-        Email di ricontatto:
-        <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-      </label>
-      <label>
-        Oggetto:
-        <input type="text" name="subject" value={formData.subject} onChange={handleChange} required />
-      </label>
-      <label>
-        Testo messaggio:
-        <textarea name="message" value={formData.message} onChange={handleChange} required />
-      </label>
-      <button type="submit">Invia</button>
-      {isSubmitted && <p>Messaggio inviato con successo!</p>}
-    </form>
+    <div className="contact-form-container">
+      {isSubmitted && (
+        <div className="confirmation-message" onClick={() => setIsSubmitted(false)}>
+          <p>Messaggio inviato con successo! Ti risponderò al più presto.</p>
+        </div>
+      )}
+      <form onSubmit={handleSubmit} className="contact-form">
+        <label>
+          Nome:
+          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
+        </label>
+        <label>
+          Cognome:
+          <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
+        </label>
+        <label>
+          Email di ricontatto:
+          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+        </label>
+        <label>
+          Oggetto:
+          <input type="text" name="subject" value={formData.subject} onChange={handleChange} required />
+        </label>
+        <label>
+          Testo messaggio:
+          <textarea name="message" value={formData.message} onChange={handleChange} required />
+        </label>
+        <button type="submit">Invia</button>
+      </form>
+    </div>
   );
 };
 
